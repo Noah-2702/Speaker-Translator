@@ -1,0 +1,18 @@
+{
+  "name": "realtime-translation-platform",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@rt/web",
+    "build": "npm run build --workspace=@rt/shared && npm run build --workspace=@rt/web",
+    "test": "npm run test --workspace=@rt/shared",
+    "lint": "npm run lint --workspace=@rt/web",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
